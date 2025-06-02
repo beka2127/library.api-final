@@ -1,0 +1,200 @@
+/* Main Application Styles - src/components/MainApp/MainApp.css */
+
+.main-app-container {
+  width: 100%; /* Take full width of the body */
+  padding: 30px; /* More internal padding */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px; /* Small margin from the very edge of the screen */
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px; /* More space below header */
+  border-bottom: 1px solid #e0e0e0; /* Lighter border */
+  padding-bottom: 20px; /* More padding below border */
+  padding-left: 0px; /* Removed padding here as main-app-container has it */
+  padding-right: 0px; /* Removed padding here as main-app-container has it */
+}
+
+.app-header h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.logout-btn {
+  background-color: #e74c3c; /* A distinct red for logout */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  width: auto; /* Ensure it doesn't stretch */
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: space-around; /* Distribute tabs evenly */
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-btn {
+  background-color: transparent; /* Transparent by default */
+  color: #555;
+  padding: 15px 25px; /* More padding */
+  border: none;
+  border-bottom: 3px solid transparent; /* Thicker active indicator */
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  margin: 0 2px; /* Smaller margin between tabs */
+  text-transform: uppercase; /* Uppercase for tabs */
+  letter-spacing: 0.5px;
+}
+
+.tab-btn:hover {
+  background-color: #f0f4f8; /* Light hover background */
+  color: #007bff;
+}
+
+.tab-btn.active {
+  background-color: #007bff; /* Primary blue for active tab */
+  color: white;
+  border-bottom-color: #007bff; /* Matches background for solid look */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Softer shadow for active tab */
+  border-radius: 8px 8px 0 0; /* Rounded top corners for active tab */
+}
+
+.tab-content {
+  padding: 30px 0; /* More padding around content */
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Styles for forms within each list component (Add/Edit sections) */
+.add-section {
+  background-color: #f8fafd; /* Very light blue background for forms */
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px; /* Space below the form section */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for form container */
+}
+
+.add-section h3 {
+    margin-top: 0; /* Remove top margin as padding handles it */
+    margin-bottom: 25px;
+    color: #007bff;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.add-form {
+    display: grid; /* Use CSS Grid for better form layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between grid items */
+    margin-top: 20px;
+    align-items: end; /* Align items to the bottom if they have different heights */
+    padding: 0 10px; /* Adjust padding if needed */
+}
+
+.add-form .form-group {
+    margin-bottom: 0; /* Remove default margin as grid gap handles it */
+}
+
+.add-form .btn {
+    width: auto; /* Buttons will take natural width within grid column */
+    min-width: 150px;
+    margin-top: 0; /* Remove default margin as grid gap handles it */
+    justify-self: stretch; /* Stretch button to fill grid cell */
+}
+
+.add-form .form-group input,
+.add-form .form-group select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styles for the data tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px; /* Space above table */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Shadow for table */
+  border-radius: 10px; /* Rounded corners for the table */
+  overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #e0e0e0; /* Lighter borders */
+  padding: 12px 15px; /* More padding in cells */
+  text-align: left;
+  font-size: 0.95em;
+  vertical-align: middle; /* Align content nicely */
+}
+
+.data-table th {
+  background-color: #f2f6fc; /* Light blueish background for headers */
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #f9fbfd; /* Very light alternating row color */
+}
+
+.data-table tr:hover {
+  background-color: #eef4f9; /* Subtle hover effect */
+}
+
+.action-buttons {
+  white-space: nowrap; /* Keep buttons on one line */
+}
+
+.action-buttons button {
+  margin-right: 8px; /* More space between action buttons */
+  padding: 8px 15px; /* More padding for action buttons */
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: auto; /* Override default btn width */
+}
+
+.edit-btn {
+    background-color: #ffc107; /* Yellow for edit */
+    color: #333;
+    border: 1px solid #ffc107;
+}
+.edit-btn:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+    border: 1px solid #dc3545;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
